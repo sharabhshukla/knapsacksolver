@@ -1,0 +1,16 @@
+[project]
+name = "knapsacksolver"
+version = "0.1.0"
+description = "A high performance knapsack solver"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["scikit-build-core>=0.11.6", "pybind11"]
+build-backend = "scikit_build_core.build"
+
+[tool.scikit-build]
+cmake.version = ">=3.15"
+cmake.build-type = "Release"
+cmake.define.PKG_CONFIG_PATH = "$env{CONDA_PREFIX}/lib/pkgconfig"
